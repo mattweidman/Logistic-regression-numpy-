@@ -1,6 +1,5 @@
 import csv
 import math
-import matplotlib.pyplot as plt
 import numpy as np
 
 ARRAY_LEN = 1000
@@ -21,11 +20,6 @@ x2_false = x1_false * SEP_SLOPE + SEP_YINTERCEPT \
 x1_true = np.random.rand(math.floor(ARRAY_LEN // 2)) * X_SPREAD
 x2_true = x1_true * SEP_SLOPE + SEP_YINTERCEPT \
     + SEP_BIAS + np.random.normal(size=x1_true.shape) * SEP_STDEV
-
-# Plot
-# plt.plot(x1_false, x2_false, marker='o', markersize=2, linestyle='', color='red')
-# plt.plot(x1_true, x2_true, marker='o', markersize=2, linestyle='', color='blue')
-# plt.show()
 
 def combine_data(x1, x2, labels):
     ''' Combines x1, x2, and labels into one n x 3 matrix. '''
